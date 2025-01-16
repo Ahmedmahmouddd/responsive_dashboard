@@ -2,26 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/common/utils/app_styles.dart';
 
 class DrawerItem extends StatelessWidget {
-  const DrawerItem({super.key, required this.model, required this.isActive});
-  final bool isActive;
+  const DrawerItem({super.key, required this.model, this.isActive= false});
+
+  final bool isActive ;
   final DrawerItemModel model;
 
   @override
   Widget build(BuildContext context) {
-    return isActive
-        ? ListTile(
-            leading: model.icon,
-            title: Text(model.title, style: AppStyles.styleBold16(context)),
-            trailing: Container(
+    return ListTile(
+      leading: model.icon,
+      title: isActive
+          ? Text(model.title, style: AppStyles.styleBold16(context))
+          : Text(model.title, style: AppStyles.styleSemiBold16(context)),
+      trailing: isActive
+          ? Container(
+              width: 4,
               decoration:
                   BoxDecoration(borderRadius: BorderRadius.circular(12), color: const Color(0xFF4EB7F2)),
-              width: 4,
-            ),
-          )
-        : ListTile(
-            leading: model.icon,
-            title: Text(model.title, style: AppStyles.styleSemiBold16(context)),
-          );
+            )
+          : null,
+    );
   }
 }
 
