@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/common/utils/app_styles.dart';
 
 class DrawerItem extends StatelessWidget {
-  const DrawerItem({super.key, required this.model, this.isActive= false});
+  const DrawerItem({super.key, required this.model, this.isActive = false});
 
-  final bool isActive ;
+  final bool isActive;
   final DrawerItemModel model;
 
   @override
@@ -12,8 +12,15 @@ class DrawerItem extends StatelessWidget {
     return ListTile(
       leading: model.icon,
       title: isActive
-          ? Text(model.title, style: AppStyles.styleBold16(context))
-          : Text(model.title, style: AppStyles.styleSemiBold16(context)),
+          ? Align(
+              alignment: Alignment.centerLeft,
+              child: FittedBox(
+                  fit: BoxFit.scaleDown, child: Text(model.title, style: AppStyles.styleBold16(context))))
+          : Align(
+              alignment: Alignment.centerLeft,
+              child: FittedBox(
+                  fit: BoxFit.scaleDown, child: Text(model.title, style: AppStyles.styleSemiBold16(context))),
+            ),
       trailing: isActive
           ? Container(
               width: 4,

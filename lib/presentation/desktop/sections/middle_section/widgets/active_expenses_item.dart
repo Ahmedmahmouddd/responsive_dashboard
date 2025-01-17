@@ -4,7 +4,7 @@ import 'package:responsive_dashboard/presentation/desktop/sections/middle_sectio
 import 'package:responsive_dashboard/presentation/desktop/sections/middle_section/widgets/all_expenses_item_header.dart';
 
 class ActiveExpensessItem extends StatelessWidget {
-  const ActiveExpensessItem({super.key, required this.itemModel,required this.onTap});
+  const ActiveExpensessItem({super.key, required this.itemModel, required this.onTap});
 
   final ExpensesItemModel itemModel;
   final void Function()? onTap;

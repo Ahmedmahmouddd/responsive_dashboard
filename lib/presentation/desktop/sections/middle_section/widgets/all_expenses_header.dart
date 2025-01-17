@@ -9,7 +9,7 @@ class AllExpensesHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 12, right: 12, left: 16, bottom: 0),
+      padding: const EdgeInsets.only(top: 12, right: 12, left: 12, bottom: 0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

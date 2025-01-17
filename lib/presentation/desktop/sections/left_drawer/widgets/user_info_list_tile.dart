@@ -11,10 +11,20 @@ class UserInfoListTile extends StatelessWidget {
     return Card(
       color: Colors.grey[50],
       elevation: 0,
-      child: ListTile(
-          leading: SvgPicture.asset(leading),
-          title: Text(title, style: AppStyles.styleSemiBold16(context)),
-          subtitle: Text(subtitle, style: AppStyles.styleRegular12(context))),
+      child: Center(
+        child: ListTile(
+            leading: SvgPicture.asset(leading),
+            title: Align(
+              alignment: Alignment.centerLeft,
+              child: FittedBox(
+                  fit: BoxFit.scaleDown, child: Text(title, style: AppStyles.styleSemiBold16(context))),
+            ),
+            subtitle: Align(
+              alignment: Alignment.centerLeft,
+              child: FittedBox(
+                  fit: BoxFit.scaleDown, child: Text(subtitle, style: AppStyles.styleRegular12(context))),
+            )),
+      ),
     );
   }
 }

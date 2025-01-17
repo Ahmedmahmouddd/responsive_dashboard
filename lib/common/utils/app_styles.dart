@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 abstract class AppStyles {
   static TextStyle styleRegular16(context) {
     return const TextStyle(
+      fontSize: 16,
       color: Color(0xFF064060),
       // fontSize: getResponsiveFontSize(context, fontSize: 16),
       fontFamily: 'Montserrat',
@@ -12,6 +13,7 @@ abstract class AppStyles {
 
   static TextStyle styleBold16(BuildContext context) {
     return const TextStyle(
+      fontSize: 16,
       color: Color(0xFF4EB7F2),
       // fontSize: getResponsiveFontSize(context, fontSize: 16),
       fontFamily: 'Montserrat',
@@ -21,16 +23,19 @@ abstract class AppStyles {
 
   static TextStyle styleMedium16(BuildContext context) {
     return const TextStyle(
+      fontSize: 16,
       color: Color(0xFF064061),
       // fontSize: getResponsiveFontSize(context, fontSize: 16),
       fontFamily: 'Montserrat',
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.w600,
     );
   }
 
   static TextStyle styleMedium20(BuildContext context) {
     return const TextStyle(
       color: Color(0xFFFFFFFF),
+      fontSize: 20,
+
       // fontSize: getResponsiveFontSize(context, fontSize: 20),
       fontFamily: 'Montserrat',
       fontWeight: FontWeight.w500,
@@ -41,6 +46,7 @@ abstract class AppStyles {
     return const TextStyle(
       color: Color(0xFF064061),
       // fontSize: getResponsiveFontSize(context, fontSize: 16),
+      fontSize: 16,
       fontFamily: 'Montserrat',
       fontWeight: FontWeight.w600,
     );
@@ -50,6 +56,7 @@ abstract class AppStyles {
     return const TextStyle(
       color: Color(0xFF064061),
       // fontSize: getResponsiveFontSize(context, fontSize: 20),
+      fontSize: 20,
       fontFamily: 'Montserrat',
       fontWeight: FontWeight.w600,
     );
@@ -59,6 +66,7 @@ abstract class AppStyles {
     return const TextStyle(
       color: Color(0xFFAAAAAA),
       // fontSize: getResponsiveFontSize(context, fontSize: 12),
+      fontSize: 12,
       fontFamily: 'Montserrat',
       fontWeight: FontWeight.w400,
     );
@@ -68,6 +76,7 @@ abstract class AppStyles {
     return const TextStyle(
       color: Color(0xFF4EB7F2),
       // fontSize: getResponsiveFontSize(context, fontSize: 24),
+      fontSize: 24,
       fontFamily: 'Montserrat',
       fontWeight: FontWeight.w600,
     );
@@ -77,6 +86,7 @@ abstract class AppStyles {
     return const TextStyle(
       color: Color.fromARGB(255, 203, 203, 203),
       // fontSize: getResponsiveFontSize(context, fontSize: 14),
+      fontSize: 14,
       fontFamily: 'Montserrat',
       fontWeight: FontWeight.w400,
     );
@@ -84,6 +94,7 @@ abstract class AppStyles {
 
   static TextStyle styleSemiBold18(BuildContext context) {
     return const TextStyle(
+      fontSize: 18,
       color: Color(0xFFFFFFFF),
       // fontSize: getResponsiveFontSize(context, fontSize: 18),
       fontFamily: 'Montserrat',
@@ -93,6 +104,7 @@ abstract class AppStyles {
 
   static TextStyle styleSemiBold22(BuildContext context) {
     return const TextStyle(
+      fontSize: 22,
       color: Color(0xFFFFFFFF),
       // fontSize: getResponsiveFontSize(context, fontSize: 22),
       fontFamily: 'Montserrat',
