@@ -29,10 +29,13 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   bloc: ^9.0.0
+  carousel_slider: ^5.0.0
   cupertino_icons: ^1.0.8
+  expandable_page_view: ^1.0.17
   flutter:
     sdk: flutter
   flutter_bloc: ^9.0.0
+  flutter_credit_card: ^4.0.1
   flutter_svg: ^2.0.16
 
 dev_dependencies:

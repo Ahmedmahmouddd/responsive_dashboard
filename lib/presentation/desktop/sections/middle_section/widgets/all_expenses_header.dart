@@ -12,6 +12,7 @@ class AllExpensesHeader extends StatelessWidget {
       padding: const EdgeInsets.only(top: 12, right: 12, left: 12, bottom: 0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        // crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text("All Expenses", style: AppStyles.styleSemiBold20(context)),
           BlocProvider(
