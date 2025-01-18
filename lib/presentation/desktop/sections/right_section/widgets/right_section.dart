@@ -12,10 +12,7 @@ class RightSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        BlocProvider(
-          create: (context) => BankCardDotIndicatorCubit(),
-          child: const MyCards(),
-        ),
+        BlocProvider(create: (context) => BankCardDotIndicatorCubit(), child: const MyCards()),
       ],
     );
   }

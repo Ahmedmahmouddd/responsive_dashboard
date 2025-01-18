@@ -4,29 +4,31 @@ import 'package:responsive_dashboard/presentation/desktop/sections/right_section
 
 class DotsIndicator extends StatelessWidget {
   const DotsIndicator({super.key});
-  
+
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<BankCardDotIndicatorCubit, int>(
-              builder: (context, activeIndex) {
-        return Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12),
-          child: Row(
-              children: List.generate(
-                  3,
-                  (index) => Padding(
-                        padding: const EdgeInsets.only(right: 8.0),
-                        child: AnimatedContainer(
-                          width: activeIndex == index ? 30 : 10,
-                          height: 10,
-                          duration: const Duration(milliseconds: 300),
-                          decoration: BoxDecoration(
-                              color: activeIndex == index ? const Color(0xFF4DB7F2) : Colors.grey[50],
-                              borderRadius: BorderRadius.circular(8)),
-                        ),
-                      ))),
-        );
-      },
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12),
+      child: BlocBuilder<BankCardDotIndicatorCubit, int>(
+      builder: (context, activeIndex) {
+          return Row(
+            children: List.generate(
+              3,
+              (index) => Padding(
+                padding: const EdgeInsets.only(right: 8.0),
+                child: AnimatedContainer(
+                  width: activeIndex == index ? 30 : 10,
+                  height: 10,
+                  duration: const Duration(milliseconds: 300),
+                  decoration: BoxDecoration(
+                      color: activeIndex == index ? const Color(0xFF4DB7F2) : Colors.grey[50],
+                      borderRadius: BorderRadius.circular(8)),
+                ),
+              ),
+            ),
+          );
+        },
+      ),
     );
   }
 }
