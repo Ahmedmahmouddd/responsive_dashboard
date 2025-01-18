@@ -3,8 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_dashboard/common/utils/app_styles.dart';
 import 'package:responsive_dashboard/presentation/desktop/sections/middle_section/bloc/expenses_dropdown_menu_cubit/expenses_dropdown_menu_cubit.dart';
 
-class AllExpensesHeader extends StatelessWidget {
-  const AllExpensesHeader({super.key});
+class DropDownMenuHeader extends StatelessWidget {
+  const DropDownMenuHeader({super.key, required this.header});
+
+  final String header;
 
   @override
   Widget build(BuildContext context) {
@@ -12,12 +14,11 @@ class AllExpensesHeader extends StatelessWidget {
       padding: const EdgeInsets.only(top: 12, right: 12, left: 12, bottom: 0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        // crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text("All Expenses", style: AppStyles.styleSemiBold20(context)),
+          Text(header, style: AppStyles.styleSemiBold20(context)),
           BlocProvider(
-            create: (context) => ExpensesDropdownMenuCubit(),
-            child: BlocBuilder<ExpensesDropdownMenuCubit, String>(
+            create: (context) => DropdownMenuCubit(),
+            child: BlocBuilder<DropdownMenuCubit, String>(
               builder: (context, activeValue) {
                 return DecoratedBox(
                   decoration: BoxDecoration(
@@ -26,7 +27,7 @@ class AllExpensesHeader extends StatelessWidget {
                     border: Border.all(color: Colors.grey.shade300),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey.withOpacity(0.1),
+                        color: Colors.grey.shade400,
                         blurRadius: 3,
                         offset: const Offset(0, 0),
                       ),
@@ -89,7 +90,7 @@ class AllExpensesHeader extends StatelessWidget {
                       ],
                       onChanged: (value) {
                         if (value != null) {
-                          context.read<ExpensesDropdownMenuCubit>().setActiveValue(value);
+                          context.read<DropdownMenuCubit>().setActiveValue(value);
                         }
                       },
                     ),

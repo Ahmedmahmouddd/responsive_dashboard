@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:responsive_dashboard/presentation/desktop/sections/right_section/bloc/bank_card_dot_indicator_cubit/bank_card_dot_indicator_cubit.dart';
+import 'package:responsive_dashboard/presentation/desktop/sections/right_section/widgets/income_section.dart';
 import 'package:responsive_dashboard/presentation/desktop/sections/right_section/widgets/my_cards.dart';
 
 class RightSection extends StatelessWidget {
@@ -10,9 +9,11 @@ class RightSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
-        BlocProvider(create: (context) => BankCardDotIndicatorCubit(), child: const MyCards()),
+        MyCards(),
+        Expanded(child: IncomeSection()),
+        SizedBox(height: 12),
       ],
     );
   }

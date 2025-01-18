@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 
-class ExpensesDropdownMenuCubit extends Cubit<String> {
-  ExpensesDropdownMenuCubit() : super("Daily");
+class DropdownMenuCubit extends Cubit<String> {
+  DropdownMenuCubit() : super("Daily");
 
   void setActiveValue(String value) {
     emit(value);

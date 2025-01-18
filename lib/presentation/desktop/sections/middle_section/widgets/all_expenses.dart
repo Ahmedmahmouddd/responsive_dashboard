@@ -11,11 +11,10 @@ class AllExpenses extends StatelessWidget {
     return const CustomBackGroundContainer(
       child: Column(
         children: [
-          AllExpensesHeader(),
+          DropDownMenuHeader(header: "All Expenses"),
           ExpensesHorizontalItems(),
         ],
       ),
     );
   }
 }
-
