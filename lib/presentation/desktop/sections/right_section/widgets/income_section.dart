@@ -19,8 +19,8 @@ class IncomeSection extends StatelessWidget {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Expanded(child: IncomeChart()),
-                Expanded(child: IncomeDetails()),
+                Expanded(flex: 3, child: IncomeChart()),
+                Expanded(flex: 5, child: IncomeDetails()),
               ],
             ),
           ),
