@@ -12,7 +12,7 @@ class RightSection extends StatelessWidget {
     return const Column(
       children: [
         MyCards(),
-        Expanded(child: IncomeSection()),
+        IncomeSection(),
         SizedBox(height: 12),
       ],
     );

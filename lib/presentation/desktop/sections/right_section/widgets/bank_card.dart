@@ -14,7 +14,7 @@ class BankCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 430 / 210,
+      aspectRatio: 380 / 200,
       child: CreditCardWidget(
           cardType: cardType,
           enableFloatingCard: true,

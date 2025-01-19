@@ -12,16 +12,18 @@ class CardsPageView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ExpandablePageView(
-      onPageChanged: (index) {
-        context.read<BankCardDotIndicatorCubit>().setActiveValue(index);
-      },
-      children: const [
-        BankCard(
-            cardBgColor: Color(0xFF4DB7F2), cardType: CardType.visa, cardNumber: "240732189657245"),
-        BankCard(cardBgColor: Colors.white, cardType: CardType.unionpay, cardNumber: "193578264821071"),
-        BankCard(cardBgColor: Colors.teal, cardType: CardType.mastercard, cardNumber: "70983182937101"),
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 24.0),
+      child: ExpandablePageView(
+        onPageChanged: (index) {
+          context.read<BankCardDotIndicatorCubit>().setActiveValue(index);
+        },
+        children: const [
+          BankCard(cardBgColor: Color(0xFF4DB7F2), cardType: CardType.visa, cardNumber: "240732189657245"),
+          BankCard(cardBgColor: Colors.white, cardType: CardType.unionpay, cardNumber: "193578264821071"),
+          BankCard(cardBgColor: Colors.teal, cardType: CardType.mastercard, cardNumber: "70983182937101"),
+        ],
+      ),
     );
   }
 }

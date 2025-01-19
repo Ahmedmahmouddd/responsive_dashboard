@@ -13,16 +13,15 @@ class IncomeSection extends StatelessWidget {
       child: Column(
         children: [
           DropDownMenuHeader(header: "Income Section"),
-          Expanded(
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 12.0),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Expanded(child: IncomeChart()),
-                  Expanded(child: IncomeDetails()),
-                ],
-              ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 12.0),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              
+              children: [
+                Expanded(child: IncomeChart()),
+                Expanded(child: IncomeDetails()),
+              ],
             ),
           ),
           SizedBox(height: 12),
