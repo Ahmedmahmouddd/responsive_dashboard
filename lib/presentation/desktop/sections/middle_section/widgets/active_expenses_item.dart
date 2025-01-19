@@ -26,11 +26,11 @@ class ActiveExpensessItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             AllExpensesItemHeader(
-              imageBackground: Colors.white.withOpacity(0.1),
+              imageBackground: Colors.white.withValues(alpha: 0.1),
               imageColor: Colors.white,
               image: itemModel.image,
             ),
-            const SizedBox( 
+            const SizedBox(
               height: 34,
             ),
             FittedBox(

@@ -14,9 +14,13 @@ class IncomeListTile extends StatelessWidget {
           width: 12,
           height: 12,
           decoration: BoxDecoration(color: color, borderRadius: const BorderRadius.all(Radius.circular(5)))),
-      title: FittedBox(fit: BoxFit.scaleDown, child: Text(title, style: AppStyles.styleSemiBold16(context))),
+      title: FittedBox(
+          alignment: Alignment.centerLeft,
+          fit: BoxFit.scaleDown,
+          child: Text(title, style: AppStyles.styleSemiBold16(context))),
       trailing: FittedBox(
         fit: BoxFit.scaleDown,
+        alignment: Alignment.centerLeft,
         child: Text(trailing,
             style: AppStyles.styleSemiBold16(context).copyWith(color: const Color(0xFF4EB7F2))),
       ),

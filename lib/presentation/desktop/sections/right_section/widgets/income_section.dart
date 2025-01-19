@@ -12,12 +12,12 @@ class IncomeSection extends StatelessWidget {
     return const CustomBackGroundContainer(
       child: Column(
         children: [
-          DropDownMenuHeader(header: "Income Section"),
+          DropDownMenuHeader(header: "Income"),
+          SizedBox(height: 6),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 12.0),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
-              
               children: [
                 Expanded(child: IncomeChart()),
                 Expanded(child: IncomeDetails()),
